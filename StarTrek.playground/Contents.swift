@@ -44,7 +44,8 @@ print(humanOfficers.count)
 
 // Q1: What percentage of humans are female?
 print("Q1")
-print(Float(femaleOfficers.count)/Float(humanOfficers.count))
+var femaleHumanOfficers = humanOfficers.filter{femaleOfficers.contains($0)}
+print(Float(femaleHumanOfficers.count)/Float(humanOfficers.count))
 
 
 // Q2: How many first officers are human?
