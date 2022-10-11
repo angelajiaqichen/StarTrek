@@ -39,22 +39,23 @@ First, a set of warm-up problems for everyone
 */
 // Q0: How many human officers are there?
 
-
+print(humanOfficers.count)
 
 
 // Q1: What percentage of humans are female?
 
-
+print(Float(femaleOfficers.count)/Float(humanOfficers.count))
 
 
 // Q2: How many first officers are human?
-
-
+var humanFirstOfficers = firstOfficers.keys.filter{humanOfficers.contains($0)}
+//print(humanFirstOfficers)
+print(humanFirstOfficers.count)
 
 
 // Q3: Get a list of females sorted by name
 
-
+print(femaleOfficers.sorted())
 
 
 /*:
@@ -87,12 +88,17 @@ Group 1
 */
 // Q4: Create an array of officer objects who captain starships
 
-
+print("Q4")
+var officerStarships = firstOfficers.map{ Officer(name: $0, ship: $1) }
+//var officerStarships = firstOfficers.map{ Officer(name: $0) }
+//print(officerStarships)
+var officerStarshipsO = officerStarships.map{$0.name}
+print(officerStarshipsO)
 
 
 // Q5: Alphabetize the previous list by the captain's name
-
-
+print("Q5")
+print(officerStarshipsO.sorted())
 
 
 /*:
