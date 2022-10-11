@@ -113,8 +113,34 @@ var vulcanFirstOfficers = firstOfficers.keys.filter{vulcanOfficers.contains($0)}
 print(vulcanFirstOfficers)
 
 
+// IN-CLASS count characters DEMO:
+// let countnames = names.reduce(0) {$1.count < 5 ? $0 + 1 : $0}
+// let altcountnames = names.reduce(0) { $0 + ($1.count < 5 ? 1 : 0) }
+
+
 // Q7: How many these Vulcan first officers have names shorter than 5 characters?
+print("Q7")
+//print(vulcanFirstOfficers.filter{ nam in nam.count < 5})
+print(vulcanFirstOfficers.filter{ nam in nam.count < 5}.count)
 
 
 
-
+// PRINTED ANSWERS:
+/*
+ Q0
+ 7
+ Q1
+ 0.85714287
+ Q2
+ 2
+ Q3
+ ["dax", "janeway", "kira", "seven", "tpol", "troi"]
+ Q4
+ ["tpol", "kira", "spock", "riker", "chakotay"]
+ Q5
+ ["chakotay", "kira", "riker", "spock", "tpol"]
+ Q6
+ ["tpol", "spock"]
+ Q7
+ 1
+ */
