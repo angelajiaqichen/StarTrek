@@ -38,23 +38,24 @@ var femaleOfficers: [String] = ["kira", "dax", "tpol", "janeway", "troi", "seven
 First, a set of warm-up problems for everyone
 */
 // Q0: How many human officers are there?
-
+print("Q0")
 print(humanOfficers.count)
 
 
 // Q1: What percentage of humans are female?
-
+print("Q1")
 print(Float(femaleOfficers.count)/Float(humanOfficers.count))
 
 
 // Q2: How many first officers are human?
+print("Q2")
 var humanFirstOfficers = firstOfficers.keys.filter{humanOfficers.contains($0)}
 //print(humanFirstOfficers)
 print(humanFirstOfficers.count)
 
 
 // Q3: Get a list of females sorted by name
-
+print("Q3")
 print(femaleOfficers.sorted())
 
 
@@ -106,8 +107,10 @@ Group 2
 */
 // Q6: Create an array of officers serving as first officers who are also Vulcan
 
-
-
+print("Q6")
+var vulcanFirstOfficers = firstOfficers.keys.filter{vulcanOfficers.contains($0)}
+//print(humanFirstOfficers)
+print(vulcanFirstOfficers)
 
 
 // Q7: How many these Vulcan first officers have names shorter than 5 characters?
