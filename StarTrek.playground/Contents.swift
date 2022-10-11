@@ -91,16 +91,22 @@ Group 1
 // Q4: Create an array of officer objects who captain starships
 
 print("Q4")
-var officerStarships = firstOfficers.map{ Officer(name: $0, ship: $1) }
-//var officerStarships = firstOfficers.map{ Officer(name: $0) }
-//print(officerStarships)
-var officerStarshipsO = officerStarships.map{$0.name}
-print(officerStarshipsO)
+//var officerStarships = firstOfficers.map{ Officer(name: $0, ship: $1) }
+//var officerStarshipsO = officerStarships.map{$0.name}
+//print(officerStarshipsO)
 
+let allCaptains : [Officer] = captains.map{ Officer(name: $0, ship: $1) }
+print(allCaptains.map{$0.name})
 
 // Q5: Alphabetize the previous list by the captain's name
 print("Q5")
-print(officerStarshipsO.sorted())
+//print(officerStarshipsO.sorted())
+let allCaptainsAlpha = captains.map{ Officer(name: $0, ship: $1) }.sorted() //this works because we made the Struct "Officer" Comparable based on name
+// or we can also do:
+// let allCaptainsAlpha = captains.map{ Officer(name: $0, ship: $1) }.sorted(by: { $0 < $1 })
+// if we want to sort by ship name:
+// let allCaptainsAlpha = captains.map{ Officer(name: $0, ship: $1) }.sorted(by: { $0.ship < $1.ship })
+print(allCaptainsAlpha.map{$0.name})
 
 
 /*:
@@ -126,22 +132,22 @@ print(vulcanFirstOfficers.filter{ nam in nam.count < 5}.count)
 
 
 
-// PRINTED ANSWERS:
 /*
+ PRINTED ANSWERS:
  Q0
  7
  Q1
- 0.85714287
+ 0.2857143
  Q2
  2
  Q3
  ["dax", "janeway", "kira", "seven", "tpol", "troi"]
  Q4
- ["tpol", "kira", "spock", "riker", "chakotay"]
+ ["sisko", "janeway", "kirk", "picard"]
  Q5
- ["chakotay", "kira", "riker", "spock", "tpol"]
+ ["janeway", "kirk", "picard", "sisko"]
  Q6
- ["tpol", "spock"]
+ ["spock", "tpol"]
  Q7
  1
  */
